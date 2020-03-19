@@ -1,4 +1,4 @@
-import { addSizeToUrl } from '../src/util'
+import { addSizeToUrl } from '../src'
 import { mockThrow } from './testUtils'
 
 describe('util', () => {

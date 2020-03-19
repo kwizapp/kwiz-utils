@@ -1,4 +1,4 @@
-import { validateId, validateSize } from '../src/validate'
+import { validateId, validateSize } from '../src'
 import { mockThrow } from './testUtils'
 
 const invalidFormatErrorMsg = `The passed id is not valid or has the wrong format. A correct id looks like this: tt3896198, two t followed by 7 digits`
