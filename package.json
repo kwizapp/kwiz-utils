@@ -1,6 +1,6 @@
 {
-  "name": "kwiz-utils",
-  "version": "0.0.0",
+  "name": "@kwizapp/kwiz-utils",
+  "version": "0.0.1",
   "description": "",
   "keywords": [],
   "main": "dist/kwiz-utils.umd.js",
