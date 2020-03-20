@@ -4,6 +4,7 @@
 name: Node.js Package
 
 on:
+  push:
   release:
     types: [created]
 
@@ -23,12 +24,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        if: github.event_name == 'release'
       - uses: actions/setup-node@v1
+        if: github.event_name == 'release'
         with:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
-          scope: '@kwizapp'
+          scope: "@kwizapp"
       - run: npm ci
+        if: github.event_name == 'release'
       - run: npm publish
+        if: github.event_name == 'release'
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
