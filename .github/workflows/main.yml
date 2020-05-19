@@ -17,11 +17,12 @@ jobs:
         with:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
-          scope: "@kwizapp"
+          scope: '@kwizapp'
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
       - run: npm ci
       - run: npm test
+      - run: npm build
 
   publish-gpr:
     needs: build
@@ -34,7 +35,7 @@ jobs:
         with:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
-          scope: "@kwizapp"
+          scope: '@kwizapp'
       - run: npm ci
         if: github.event_name == 'release'
       - run: npm publish
