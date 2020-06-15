@@ -71,7 +71,7 @@
     "singleQuote": true
   },
   "devDependencies": {
-    "@types/jest": "^23.3.2",
+    "@types/jest": "^26.0.0",
     "@types/node": "^10.11.0",
     "colors": "^1.3.2",
     "coveralls": "^3.0.2",
